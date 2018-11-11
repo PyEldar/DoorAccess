@@ -1,5 +1,4 @@
 
-
 class User:
 	"""User Class"""
 
@@ -10,7 +9,6 @@ class User:
 		self.Email = Email
 		self.CardID = CardID
 		self.RoleID = RoleID
-
 
 	def __str__(self):
 		return self.FirstName

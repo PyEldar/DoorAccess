@@ -12,7 +12,6 @@ class Button:
 		self.PIN = PIN(LockPIN)		#Instance of PIN class
 		self.time = time		#time during that is PIN enabled by openTime()
 
-
 	def listen(self):
 		"""Listens for button press, when is button pressed 'openTime()' is called"""
 		while True:
@@ -20,14 +19,12 @@ class Button:
 				self.openTime()
 			time.sleep(0.1)
 
-
 	def openTime(self):
 		"""Enables PIN for specified time(self.time)"""
-		self.PIN.ONTime(self.time)		
-
+		self.PIN.ONTime(self.time)
 
 	def __str__(self):
 		return self.ButtonID
 
 
-		
+

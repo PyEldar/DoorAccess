@@ -26,7 +26,6 @@ class Lock:
 			self.status = "Error"
 			print(err)
 
-
 	def listen(self):
 
 		"""
@@ -60,33 +59,27 @@ class Lock:
 					print("ERR 3")
 				return "ERROR"
 
-
-
 	def openTime(self, time):
 		"""Opens PIN(LockAddr) for specified Time"""
 		print("Open")
-		self.PIN.ONTime(time)	
+		self.PIN.ONTime(time)
 
-	
 	def open(self):
 		"""Opens PIN(LockAddr) until close() or cleanup() is called"""
 		print("Open")
 		self.PIN.ON()
 
-
 	def close(self):
 		print("Close")
 		self.PIN.OFF()
 
-
 	def status(self):
 		"""return 'OK' or 'ERROR'"""
-		return self.PIN.STATUS	
+		return self.PIN.STATUS
 
 
 	def __str__(self):
 		return self.Name
-
 
 	def reconnect(self):
 		"""Tries to Reconnect to Reader on same addres when disconnect"""
@@ -100,14 +93,9 @@ class Lock:
 		self.alldata = b""
 		self.status = "OK"
 
-
 	def isConnected(self):
 		"""Returns True if reader is connected on 'ReaderAddr'"""
 		return os.path.exists(self.ReaderAddr)
 
-
 	def __del__(self):
 		del self.ser
-
-
-	

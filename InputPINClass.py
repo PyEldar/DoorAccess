@@ -15,7 +15,6 @@ class InputPIN:
 	def __str__(self):
 		return self.PIN
 
-
 	def listen(self):
 		"""Listen until signal comes then returns True"""
 		while True:
@@ -25,10 +24,8 @@ class InputPIN:
 				return True
 			time.sleep(0.2)
 
-
-
 	def clean(self):
 		"""Cleans the GPIO"""
 		GPIO.cleanup()
-	
+
 
